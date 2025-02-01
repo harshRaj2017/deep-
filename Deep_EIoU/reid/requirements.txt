@@ -27,3 +27,4 @@ ultralytics
 moviepy==1.0.3
 ffmpeg
 parse
+torchreid
