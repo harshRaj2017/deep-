@@ -1,10 +1,11 @@
 from __future__ import division, print_function, absolute_import
 import numpy as np
 import warnings
+import Cython
 from collections import defaultdict
 
 try:
-    from ..metrics.rank_cylib.rank_cy import evaluate_cy
+    from .rank_cylib.rank_cy import evaluate_cy
     IS_CYTHON_AVAI = True
 except Exception as e:
     print(f"An error occurred: {e}")
