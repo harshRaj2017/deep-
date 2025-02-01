@@ -6,7 +6,8 @@ from collections import defaultdict
 try:
     from ..metrics.rank_cylib.rank_cy import evaluate_cy
     IS_CYTHON_AVAI = True
-except ImportError:
+except Exception as e:
+    print(f"An error occurred: {e}")
     IS_CYTHON_AVAI = False
     warnings.warn(
         'Cython evaluation (very fast so highly recommended) is '
